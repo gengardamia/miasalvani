@@ -166,7 +166,7 @@ section h2 {
     background-color: #e88b00;
 }
 
-/* Seção da Equipe & Companhia */
+/* Seção da Equipe Mia Salvani */
 .equipe-section {
     text-align: center;
     margin: 45px 0 20px 0;
@@ -213,6 +213,35 @@ section h2 {
     font-size: 0.85rem;
     color: #e5e7eb;
     font-weight: 500;
+}
+
+/* Fantasminha Flutuante */
+@keyframes flutuar {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.fantasma-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2.2rem;
+    z-index: 999;
+    animation: flutuar 3s ease-in-out infinite;
+    cursor: default;
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.4));
+    transition: transform 0.2s;
+}
+
+.fantasma-flutuante:hover {
+    transform: scale(1.2) rotate(-10deg);
 }
 
 footer {
