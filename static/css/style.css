@@ -215,33 +215,62 @@ section h2 {
     font-weight: 500;
 }
 
-/* Fantasminha Flutuante */
-@keyframes flutuar {
+/* Fantasminha Assombrando as Bordas */
+@keyframes contornar-bordas {
     0% {
-        transform: translateY(0px) rotate(0deg);
+        top: 0;
+        left: 0;
+        transform: scaleX(1);
+    }
+    24% {
+        top: 0;
+        left: calc(100vw - 50px);
+        transform: scaleX(1);
+    }
+    25% {
+        top: 0;
+        left: calc(100vw - 50px);
+        transform: rotate(90deg);
+    }
+    49% {
+        top: calc(100vh - 50px);
+        left: calc(100vw - 50px);
+        transform: rotate(90deg);
     }
     50% {
-        transform: translateY(-12px) rotate(5deg);
+        top: calc(100vh - 50px);
+        left: calc(100vw - 50px);
+        transform: scaleX(-1);
+    }
+    74% {
+        top: calc(100vh - 50px);
+        left: 0;
+        transform: scaleX(-1);
+    }
+    75% {
+        top: calc(100vh - 50px);
+        left: 0;
+        transform: rotate(-90deg);
+    }
+    99% {
+        top: 0;
+        left: 0;
+        transform: rotate(-90deg);
     }
     100% {
-        transform: translateY(0px) rotate(0deg);
+        top: 0;
+        left: 0;
+        transform: scaleX(1);
     }
 }
 
-.fantasma-flutuante {
+.fantasma-borda {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 2.2rem;
+    font-size: 2rem;
     z-index: 999;
-    animation: flutuar 3s ease-in-out infinite;
-    cursor: default;
-    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.4));
-    transition: transform 0.2s;
-}
-
-.fantasma-flutuante:hover {
-    transform: scale(1.2) rotate(-10deg);
+    pointer-events: none;
+    animation: contornar-bordas 16s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.6));
 }
 
 footer {
