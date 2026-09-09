@@ -1,129 +1,166 @@
 body {
-    background-color: #0d0d0d;
-    color: #f1f1f1;
+    background-color: #0b0f19;
+    color: #f3f4f6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h2 {
-    border-bottom: 2px solid #222;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.livros-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.livro-card {
-    background: #161616;
-    border: 1px solid #262626;
-    border-radius: 8px;
-    padding: 20px;
-    width: 220px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.2s ease;
 }
 
-.livro-card:hover {
-    transform: translateY(-5px);
+.perfil-header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
 }
 
-.livro-card img {
+/* Tamanho fixo e perfeito da foto de perfil redonda */
+.foto-container {
     width: 120px;
-    height: 170px;
+    height: 120px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 15px;
+    border-radius: 50%;
+    display: block;
 }
 
-.livro-card h3 {
-    margin: 10px 0 5px 0;
-    font-size: 1.2rem;
+.perfil-header h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+    font-weight: 700;
 }
 
-.livro-card p {
-    font-size: 0.9rem;
-    color: #aaa;
+.bio {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    max-width: 550px;
+    margin: 0 auto;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+.titulo-secao {
+    font-size: 1.4rem;
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+
+.livros-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.livro-card-horizontal {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.livro-card-horizontal:hover {
+    transform: translateY(-2px);
+    border-color: #3b82f6;
+}
+
+.livro-card-horizontal img {
+    width: 90px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.livro-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     flex-grow: 1;
-    margin-bottom: 15px;
 }
 
-/* Botão de Compra / Carrinho */
-.btn-comprar {
+.livro-info h3 {
+    font-size: 1.15rem;
+    margin: 0 0 4px 0;
+    color: #f3f4f6;
+}
+
+.subtitulo-livro {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    margin: 0 0 6px 0;
+}
+
+.resumo-livro {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.btn-carrinho {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     background-color: #ff9900;
-    color: #000;
-    padding: 8px 14px;
-    border-radius: 4px;
+    color: #111;
+    padding: 6px 14px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.85rem;
-    transition: background 0.3s ease;
-    margin-top: auto;
+    transition: background-color 0.2s;
 }
 
-.btn-comprar:hover {
+.btn-carrinho:hover {
     background-color: #e88b00;
 }
 
-.icone-carrinho {
-    width: 16px;
-    height: 16px;
+.card-breve-horizontal {
+    background: #0d1117;
+    border: 2px dashed #374151;
 }
 
-/* Estilo específico para o Livro 4 (Em Breve) */
-.proximo-livro-section {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.livro-card.livro-breve {
-    background: #111;
-    border: 2px dashed #444;
-}
-
-.arte-interrogacao {
-    width: 120px;
-    height: 170px;
-    background: #1a1a1a;
+.interrogacao-box {
+    width: 90px;
+    height: 130px;
+    background: #161b22;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    color: #4b5563;
+    font-weight: bold;
+    flex-shrink: 0;
 }
 
-.arte-interrogacao span {
-    font-size: 3.5rem;
-    color: #666;
+.em-breve-texto {
+    color: #ef4444 !important;
     font-weight: bold;
-}
-
-.em-breve {
-    color: #e50914;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin: 0 !important;
 }
