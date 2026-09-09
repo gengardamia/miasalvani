@@ -1,161 +1,129 @@
-:root {
-    --bg-deep: #060913;
-    --bg-surface: #0f172a;
-    --border-blue: #1e3a8a;
-    --accent-blue: #3b82f6;
-    --accent-glow: #60a5fa;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-}
-
 body {
-    background-color: var(--bg-deep);
-    color: var(--text-main);
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0d0d0d;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
     text-align: center;
-    padding: 4rem 1rem;
-    background: radial-gradient(circle at center, #1e293b 0%, var(--bg-deep) 100%);
-    border-bottom: 2px solid var(--border-blue);
-}
-
-.avatar-container img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 3px solid var(--accent-glow);
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
-    object-fit: cover;
-}
-
-h1 {
-    margin-top: 1.2rem;
-    font-size: 2.8rem;
-    letter-spacing: 1.5px;
-    color: var(--text-main);
-}
-
-.bio-text {
-    max-width: 650px;
-    margin: 1rem auto;
-    font-size: 1.15rem;
-    color: var(--accent-glow);
-    font-style: italic;
-    line-height: 1.6;
+    padding: 40px 20px;
 }
 
 .container {
-    max-width: 950px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h2 {
-    color: var(--accent-glow);
-    border-left: 4px solid var(--accent-blue);
-    padding-left: 12px;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
+    border-bottom: 2px solid #222;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.timeline-grid {
+.livros-grid {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .livro-card {
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-blue);
-    border-radius: 12px;
-    padding: 2rem;
+    background: #161616;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
     display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    transition: all 0.3s ease;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
 }
 
 .livro-card:hover {
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+    transform: translateY(-5px);
 }
 
-.livro-capa {
-    width: 130px;
-    height: 190px;
+.livro-card img {
+    width: 120px;
+    height: 170px;
     object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid var(--accent-blue);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    flex-shrink: 0;
-}
-
-.livro-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    width: 100%;
-}
-
-.livro-info h3 {
-    margin: 0;
-    font-size: 1.6rem;
-    color: var(--text-main);
-}
-
-.ano-badge {
-    background-color: #1e3a8a;
-    color: var(--accent-glow);
-    padding: 0.2rem 0.6rem;
     border-radius: 4px;
-    font-size: 0.75rem;
+    margin-bottom: 15px;
+}
+
+.livro-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.2rem;
+}
+
+.livro-card p {
+    font-size: 0.9rem;
+    color: #aaa;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+/* Botão de Compra / Carrinho */
+.btn-comprar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ff9900;
+    color: #000;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
-    display: inline-block;
-    width: fit-content;
-}
-
-.prequel-badge {
-    background-color: #7c2d12;
-    color: #fdba74;
-}
-
-.sub-titulo {
-    color: var(--accent-glow);
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-.tropes-box {
-    background-color: rgba(30, 58, 138, 0.25);
-    border-left: 3px solid var(--accent-blue);
-    padding: 0.6rem 0.9rem;
-    border-radius: 4px;
     font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.4;
+    transition: background 0.3s ease;
+    margin-top: auto;
 }
 
-.tropes-box strong {
-    color: var(--accent-glow);
+.btn-comprar:hover {
+    background-color: #e88b00;
 }
 
-.livro-info p {
-    margin: 0;
-    color: var(--text-muted);
-    line-height: 1.6;
-    font-size: 0.95rem;
+.icone-carrinho {
+    width: 16px;
+    height: 16px;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    color: var(--text-muted);
-    border-top: 1px solid var(--border-blue);
-    margin-top: 4rem;
-    font-size: 0.9rem;
+/* Estilo específico para o Livro 4 (Em Breve) */
+.proximo-livro-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.livro-card.livro-breve {
+    background: #111;
+    border: 2px dashed #444;
+}
+
+.arte-interrogacao {
+    width: 120px;
+    height: 170px;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.arte-interrogacao span {
+    font-size: 3.5rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.em-breve {
+    color: #e50914;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
