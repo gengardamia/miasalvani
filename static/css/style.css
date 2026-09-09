@@ -166,6 +166,55 @@ section h2 {
     background-color: #e88b00;
 }
 
+/* Seção da Equipe & Companhia */
+.equipe-section {
+    text-align: center;
+    margin: 45px 0 20px 0;
+    width: 100%;
+}
+
+.equipe-section h3 {
+    font-size: 1rem;
+    color: #9ca3af;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.equipe-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.equipe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.equipe-item:hover {
+    transform: translateY(-4px);
+}
+
+.equipe-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3b82f6;
+    margin-bottom: 8px;
+}
+
+.equipe-item span {
+    font-size: 0.85rem;
+    color: #e5e7eb;
+    font-weight: 500;
+}
+
 footer {
     text-align: center;
     padding: 30px;
